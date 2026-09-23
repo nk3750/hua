@@ -1,0 +1,7 @@
+# The versions the published scores were produced with (Python 3.12).
+torch==2.14.0
+transformers==5.17.0
+tokenizers==0.23.2
+safetensors==0.8.0
+huggingface_hub==1.32.0
+Jinja2==3.1.6

@@ -1,0 +1,26 @@
+# A model entry for allenporter/home-assistant-datasets. Copy it into the harness's
+# models/ directory. It expects serve.py running on port 8017 with its default
+# --model-name, hua-1.7b.
+model_id: hua-1.7b
+domain: llama_cpp
+description:
+  hua-1.7b v1 - Qwen3-1.7B trained with GRPO to control Home Assistant - in bf16,
+  served by serve.py from https://github.com/nk3750/hua (Qwen3's chat template,
+  thinking off) through Home Assistant's core llama_cpp integration.
+categories:
+  - alibaba
+  - local
+urls:
+  - https://huggingface.co/neelabhbuilds/hua-1.7b
+  - https://github.com/nk3750/hua
+config_entry_data:
+  base_url: http://localhost:8017/v1
+  api_key: sk-0000000000000000000
+  streaming: false
+version: 1
+subentries_data:
+  - subentry_type: conversation
+    title: Mock Title
+    data:
+      chat_model: hua-1.7b
+      llm_hass_api: assist
